@@ -1,0 +1,10 @@
+from karel.stanfordkarel import *
+
+def main():
+    # Move while there are beepers
+    while beepers_present():
+        move()
+   
+
+if __name__ == '__main__':
+    main()
