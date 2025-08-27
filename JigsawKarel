@@ -1,0 +1,33 @@
+from karel.stanfordkarel import *
+
+def main():
+    move_and_pick()
+    put_puzzle()
+    return_to_zero()
+
+def move_and_pick():
+    for i in range(2):
+        move()
+    pick_beeper()
+
+def put_puzzle():
+    move()
+    turn_left()
+    for i in range(2):
+        move()
+    put_beeper()
+    for i in range(2):
+        turn_left()
+
+def return_to_zero():
+    for i in range(2):
+        move()
+    for i in range(3):
+        turn_left()
+    for i in range(3):
+        move()
+    for i in range(2):
+        turn_left()
+
+if __name__ == '__main__':
+    main()
